@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-Store</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="./login-style.css">
+</head>
+<body>
+    <!-- Navbar Component -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand font-weight-bolder head" href="./index.html">
+      <img src="./Images/GS_logo.jpg" width="100px" alt="image">
+      <span class="font-weight-bold" >G STORE</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./about.html">About us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./products.html">Our products</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./form.html">Sell</a>
+          </li>
+        <li class="nav-item  active">
+          <a class="nav-link" href="#">Sign in<span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav><br>
+
+  <div class="row">
+    <div class="col">
+        <div class="wrapper">
+            <div class="form-wrapper sign-up">
+                <form action="">
+                    <h2 class="sign-up">Sign Up</h2>
+                    <div class="input-group">
+                        <input type="text" required>
+                        <label for="">Username</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" required>
+                        <label for="">Email</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" required>
+                        <label for="">Password</label>
+                    </div>
+                    <button type="submit" class="btn">Sign Up</button>
+                    <div class="options">
+                        <p>Or</p>
+                        <p>Sign up using</p>
+                        <img src="./Images/google.png" width="90px">
+            <img src="./Images/fb.png" width="100px">
+                    </div>
+                    <div class="sign-link">
+                        <p>Already have an account? <a href="#" class="signIn-link">Sign In</a></p>
+                    </div>
+                </form>
+            </div>
+        
+            <div class="form-wrapper sign-in">
+                <form action="">
+                    <h2>Login</h2>
+                    <div class="input-group">
+                        <input type="text" required>
+                        <label for="">Username</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" required>
+                        <label for="">Password</label>
+                    </div>
+                    <div class="forgot-pass">
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                    <div class="options">
+                        <p>Or</p>
+                        <p>Sign in using</p>
+                        <img src="./Images/google.png" width="90px">
+            <img src="./Images/fb.png" width="100px">
+                    </div>
+                    <div class="sign-link">
+                        <p>Don't have an account? <a href="#" class="signUp-link">Sign Up</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+
+<script>
+  const wrapper = document.querySelector('.wrapper');
+const signUpLink = document.querySelector('.signUp-link');
+const signInLink = document.querySelector('.signIn-link');
+
+signUpLink.addEventListener('click', () => {
+    wrapper.classList.add('animate-signIn');
+    wrapper.classList.remove('animate-signUp');
+});
+
+signInLink.addEventListener('click', () => {
+    wrapper.classList.add('animate-signUp');
+    wrapper.classList.remove('animate-signIn');
+});
+</script>
+
+
+  <!-- Bootstrap's JavaScript Files -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
